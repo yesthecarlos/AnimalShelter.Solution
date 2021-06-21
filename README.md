@@ -76,6 +76,29 @@ http://localhost:5000/api/Animals/6
   "gender": "Male"
 }
 ```
+This API also accepts search parameters. The user can search by species and/or gender.
+
+#### Path Parameters
+| Parameter | Type | Default | Required | Description |
+| :---: | :---: | :---: | :---: | --- |
+| species | string | none | false | Return matches by species.
+| gender | string | none | false | Return matches by gender. |
+
+#### Example Query
+```
+http://localhost:5000/api/Animals/?species=cat&gender=female
+```
+
+#### Sample JSON Response
+```
+{
+  "animalId": 7,
+  "name": "Linda",
+  "species": "Cat",
+  "age": 10,
+  "gender": "Female"
+}
+```
 
 ## Known Bugs
 
