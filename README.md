@@ -35,17 +35,20 @@ _This project uses C#, .NET 5, EF Core 5, MySQL, Identity, the MVC pattern, and 
 {
   "ConnectionStrings": 
   {
-    "DefaultConnection": "Server=localhost;Port=3306;database=sweet_savory;uid=[user];pwd=[password];"
+    "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter;uid=[user];pwd=[password];"
   }
 }
 ```
 5. To run the web app:
-    * Navigate to `SweetSavory/` in your command line
+    * Navigate to `AnimalShelter/` in your command line
     * Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
     * Run the commmand `dotnet build` to build the project and its dependencies into a set of binaries
     * Run the command `dotnet ef database update` to build the database using the Migrations folder
     * Run the command `dotnet run` to run the project
     * Finally, open the project in your web browser, using the specified address (default is localhost:5000)
+
+6. To access Swagger API Documentation:
+    * While the project is running, navigate to the following address in your web browser: http://localhost:5000/swagger
 
 
 ## Known Bugs
