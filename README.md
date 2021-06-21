@@ -1,6 +1,6 @@
 # _Animal Shelter_
 
-#### _.NET 5 MVC Shelter Overview Program using EF Core 5, MySQL, Identity, and Swagger_
+#### _.NET 5 Animal Shelter API using EF Core 5, MySQL, and Swagger_
 
 #### By _**Carlos Mendez**_
 
@@ -10,13 +10,12 @@
 * .NET 5
 * EF Core 5
 * MySQL
-* Identity
-* Swagger / Swashbuckle
+* Swagger / Swashbuckle 5.6.3
 
 
 ## Description
 
-_This project uses C#, .NET 5, EF Core 5, MySQL, Identity, the MVC pattern, and a Code First approach to create an animal shelter overview program that allows the user to login and maintain a database for an animal shelter. The app welcomes the user and allows them view, add, and remove animals from a database._
+_This project uses C#, .NET 5, EF Core 5, and MySQL to create an animal shelter API that allows the user to connect to and maintain a database for an animal shelter. The API endpoints allow for viewing, adding, editing, and removing animals from the database. It uses the Swashbuckle implementation of Swagger tooling to generate documentation based on the OpenAPI specification._
 
 
 ## Setup and Use
@@ -39,7 +38,7 @@ _This project uses C#, .NET 5, EF Core 5, MySQL, Identity, the MVC pattern, and 
   }
 }
 ```
-5. To run the web app:
+5. To run the API:
     * Navigate to `AnimalShelter/` in your command line
     * Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
     * Run the commmand `dotnet build` to build the project and its dependencies into a set of binaries
@@ -50,6 +49,33 @@ _This project uses C#, .NET 5, EF Core 5, MySQL, Identity, the MVC pattern, and 
 6. To access Swagger API Documentation:
     * While the project is running, navigate to the following address in your web browser: http://localhost:5000/swagger
 
+### Endpoints
+Base URL: `http://localhost:5000`
+
+#### HTTP Request Structure
+```
+GET /api/Animals
+POST /api/Animals
+GET /api/Animals/{id}
+PUT /api/Animals/{id}
+DELETE /api/Animals/{id}
+```
+
+#### Example Query
+```
+http://localhost:5000/api/Animals/6
+```
+
+#### Sample JSON Response
+```
+{
+  "animalId": 6,
+  "name": "Cornelius",
+  "species": "Cat",
+  "age": 3,
+  "gender": "Male"
+}
+```
 
 ## Known Bugs
 
